@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML BootCamp</title>
+</head>
+
+<body>
+    <h1>Welcome to the HTML BootCamp Session</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos dolorum minus eum illo laboriosam fugiat
+        repudiandae non perspiciatis odio quidem voluptatum et dicta at praesentium consequuntur laudantium, corrupti
+        sit
+        explicabo omnis dolore, expedita neque numquam deleniti. Consequuntur, deleniti id. Ex ullam temporibus nihil
+        recusandae dolorum at, quia optio voluptate eligendi eius deleniti laborum quod, quidem, ratione aut molestiae
+        inventore architecto et quaerat unde praesentium officiis maxime tenetur aliquid. Earum, aut?</p>
+
+    <!-- List -->
+
+    <!-- We have two types of lists are ordered and unordered 
+    unordered list we have some types are square, circle, disc etc. 
+    ordered list we ahev the types are A, 1, I, i, etc. we can starts from anywhere 
+    -->
+
+    <!-- <ul type="none">
+        <li>Ramesh</li>
+        <li>Suresh</li>
+        <li>Sathish</li>
+        <li>Shanthosh</li>
+        <li>Chethan</li>
+    </ul> -->
+
+    <ul type="square">
+        <li>Ramesh</li>
+        <li>Suresh</li>
+        <li>Sathish</li>
+        <li>Shanthosh</li>
+        <li>Chethan</li>
+    </ul>
+
+    <!-- <ol type="A">
+        <li>Ramesh</li>
+        <li>Suresh</li>
+        <li>Sathish</li>
+        <li>Shanthosh</li>
+        <li>Chethan</li>
+    </ol> -->
+
+    <ol type="1" start="10">
+        <li>Ramesh</li>
+        <li>Suresh</li>
+        <li>Sathish</li>
+        <li>Shanthosh</li>
+        <li>Chethan</li>
+    </ol>
+
+    <!-- Tables -->
+    <hr>
+
+    <h1>Table topic</h1>
+
+    <table border="2">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Mobile</th>
+        </tr>
+
+        <tr>
+            <td>Varunkumar</td>
+            <td>varunkumar@gmail.com</td>
+            <td>Mysore</td>
+            <td>9687458962</td>
+        </tr>
+
+        <tr>
+            <td>Kirankumar</td>
+            <td>kirankumar@gmail.com</td>
+            <td>Manglore</td>
+            <td>9687858962</td>
+        </tr>
+
+        <tr>
+            <td>Kirankumar</td>
+
+            <td></td>
+            <td>9687858962</td>
+        </tr>
+
+    </table>
+
+    <br><br>
+
+    <!-- Forms -->
+
+    <hr>
+    <h1>Form topic</h1>
+
+    <form action="">
+
+        <!-- If I want to add the value before that -->
+
+        <label for="">Enter the FirstName</label>
+        <input type="text" placeholder="Enter the name" value="Varunkumar" readonlyx>
+        <br><br>
+
+        <label for="">Enter the LastName</label>
+        <input type="text" placeholder="Enter the name" required>
+        <br><br>
+
+        <label for="">Enter the Email</label>
+        <input type="email" placeholder="Enter the email" required>
+        <br><br>
+
+        <label for="">Enter the password</label>
+        <input type="password" placeholder="Enter the password" required>
+        <br><br>
+
+        <label for="">Select Date</label>
+        <input type="date" required>
+        <br><br>
+
+        <label for="">Select TimeStamp</label>
+        <input type="datetime-local" required>
+        <br><br>
+
+        <label for="">Gender</label>
+        <br><br>
+
+        <label for="">Male</label>
+        <input type="radio" required name="Gender">
+
+        <label for="">Female</label>
+        <input type="radio" required name="Gender">
+        <br><br>
+
+        <label>Check all the suitable criteria</label>
+        <br><br>
+
+        <label>Your interests are:</label>
+        <br><br>
+
+        <label>
+            <input type="checkbox" name="interests" value="Cricket">
+            Cricket
+        </label>
+        <br><br>
+
+        <label>
+            <input type="checkbox" name="interests" value="Volleyball">
+            Volleyball
+        </label>
+        <br><br>
+
+        <label>
+            <input type="checkbox" name="interests" value="Football">
+            Football
+        </label>
+        <br><br>
+
+        <label>
+            <input type="checkbox" name="interests" value="Kabaddi">
+            Kabaddi
+        </label>
+        <br><br>
+
+        <label>
+            <input type="checkbox" name="interests" value="Table Tennis">
+            Table Tennis
+        </label>
+        <br><br>
+
+        <label for="">Type of Degree:</label>
+        <br><br>
+
+        <label for="">Please Select</label>
+
+        <select name="Type of Degree">
+            <option value="BE">Batchular of Engineering</option>
+            <option value="BTech">BTech</option>
+            <option value="MCA">MCA</option>
+            <option value="Master Degree">Master Degree</option>
+            <option value="others">Others</option>
+        </select>
+        <br><br>
+
+        <label for="">Mobile</label>
+        <br><br>
+        <input type="text" minlength="10" maxlength="12" placeholder="Enter your mobile number">
+        <br><br>
+
+        <button type="submit">Submit</button>
+        <br><br><br>
+        <hr>
+
+        <!-- Semantic tags -->
+        <!-- main, header, nav, aside, footer, section 
+        It is used to structure our content in an organized manner-->
+
+        <h1>Semantic tags</h1>
+
+        <main>
+            <header>
+                <p>This is the header</p>
+            </header>
+            <nav>
+                <p>This is the nav bar</p>
+            </nav>
+            <aside>
+                <p>This is the aside</p>
+            </aside>
+            <footer>
+                <p>This is the footer</p>
+            </footer>
+            <section>
+                <p>This is the section</p>
+            </section>
+
+            <div>This it the div</div>
+            <div>You can see the differance of div and scemantic</div>
+            <div>So, the content is required for organized manner we can use semantic tags</div>
+        </main>
+
+        <!-- Span If we want to add the spacific style or etc for the specific word in the paragraph or
+          whatever it is we can use span -->
+
+        <p>This is the <span><a href="https://html.com/">HTML BootCamp</a></span></p>
+
+
+    </form>
+
+</body>
+
+</html>
