@@ -1,0 +1,234 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Christmas Section */
+.christmas-celebration {
+  width: 460px;
+  margin: 60px auto;
+  background: white;
+  border-radius: 14px;
+  padding: 12px;
+  text-align: center;
+}
+
+.img-tag {
+    width: 460px;
+    border-radius: 14px;
+}
+
+/* positions
+Basically there are four positions 
+Default is static 
+1) Fixed
+2) Sitcky
+3) absolute
+4) relative
+
+ Display properties
+ */
+
+.card {
+  width: 270px;
+  margin: 20px auto;
+  background: white;
+  border-radius: 14px;
+  padding: 10px;
+}
+
+ .card-img {
+    width: 100%;
+    border-radius: 14px;
+
+ }
+
+ /* Images */
+.img-small,
+.img-large {
+  width: 100%;
+  border-radius: 14px;
+}
+
+/* Blog Container */
+.container {
+  width: 830px;
+  margin: 80px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+}
+
+ .img-tag {
+    width: 830px;
+    border-radius: 14px;
+ } 
+
+ .cristmas-tag {
+    position: absolute;
+    top: 330px;
+    color: wheat;
+    left: 360px;
+ }
+
+/* Newsletter Button */
+.news-letter-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 40px;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* Headers */
+.header {
+  position: sticky;
+  top: 0;
+  background: white;
+  padding: 10px 0;
+  z-index: 10;
+}
+
+/* Image Overlay */
+.image-wrapper {
+  position: relative;
+}
+
+
+.overlay-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 22px;
+}
+
+/* Footer */
+.footer {
+  position: sticky;
+  bottom: 0;
+  background: white;
+  padding: 10px;
+  text-align: center;
+}
+
+ /* .red {
+    width: 80px;
+    height: 80px;
+    background-color: red;
+ }
+
+ .blue {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+ }
+
+ .black {
+    width: 70px;
+    height: 70px;
+    background-color: black;
+ } */
+
+.shiva-img {
+  width: 840px;
+  margin: 120px auto;
+  position: relative;
+}
+
+.lord-shiva {
+  width: 100%;
+  border-radius: 14px;
+}
+
+ .img-content {
+    position: absolute;
+    bottom: 60px;
+    left: 20px;
+    color: white;
+    z-index: 100;
+ }
+
+ /* positions:
+
+ static => It is a default 
+   fixed => fix something on specific position
+   sticky => the element will stick in the given direction and distance
+   absolute => to move an element on one level top
+   relative => to move the absolute inside the parent instead of the whole screen.
+ 
+ z-index default value is 0*/
+
+ .tint {
+    background-color: rgba(0, 0, 0, 0.262);
+    width: 840px;
+    height: 472px;
+    position: absolute;
+    top: 0;
+    border-radius: 14px;
+    z-index: 0;
+ }
+
+ .block {
+   background-color: orange;
+   display: inline-block;
+ }
+
+ .paragraph {
+   background-color: blue;
+   display: inline-block;
+   height: 200px;
+   width: 200px;
+ }
+
+.user {
+   border: 1px solid gray;
+   width: 400px;
+   margin: 20px auto;
+   border-radius: 12px;
+   padding: 16px 10px;
+}
+
+.user-img {
+   height: 100px;
+   border-radius: 50%;
+}
+
+.center {
+   text-align: center;
+}
+
+.link {
+   text-decoration: none;
+   background-color: black;
+   color: white;
+   padding: 10px 16px;
+   display: inline-block;
+   border-radius: 8px;
+   font-size: 14px;
+}
+
+
+ /* display
+      block => Does not allow anyone to come side by side.
+      example -> h1, div, p, all these are block level properties
+
+      inline => It allows side by side but we cannot give an width and height. We need to add height and width we can go with inline-block
+      example -> a, span, image etc. all these are inline level properties. These are the properties are default inline.
+
+      inline-block => 
+      none
+ */
