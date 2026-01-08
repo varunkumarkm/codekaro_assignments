@@ -1,0 +1,197 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.anml-img {
+    height: 300px;
+    width: 400px;
+    background-color: red;
+    object-fit: cover;
+    /* Using this property we can see the image properly, most of the cases use cover property contain is not cover all the background*/
+    object-position: bottom;
+    /* Using this property we can control the image like top, bottom, and center */
+
+}
+
+.bg-img {
+    height: 430px;
+    width: 830px;
+    margin: auto;
+    background-color: red;
+    background-image: url(https://plus.unsplash.com/premium_photo-1664302684037-85879958e242?q=80&w=1182&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.content {
+    color: white;
+}
+
+.img-filter {
+    /* height: 290px;
+    filter: brightness(120%);
+    filter: contrast(130%);
+    If we want our image greyish we can use the below property
+    filter: grayscale(20%);
+
+    We are using this property for flashback
+    filter: invert(100%);
+
+    If we want to get the old kind of image
+    filter: sepia(120%); 
+
+    This below property we are using a lot, using this property we set how much transparant required for our image.
+    filter: opacity(50%);
+
+    Chaning different color based on the numbers of degree
+    filter: hue-rotate(190deg);
+
+    filter: blur(1px); */
+
+    /* If we want to combine all the property together */
+    height: 290px;
+    filter: brightness(110%) contrast(140%) opacity(90%) hue-rotate(-20deg) blur(3px);
+}
+
+.demo {
+    /* margin: 60px auto; */
+    width: 330px;
+    border-radius: 12px;
+    background-color: blueviolet;
+    padding: 10px;
+    color: white;
+    transform: scale();
+    margin: 30px;
+
+    /* It helps to rotate our content   
+    transform: rotate(-6deg); */
+
+    /* It helps to rotate or create a 2D kind of images
+    transform: skew(30deg); */
+
+    transform: translate(50px, 50px);
+
+    /* What is the differance between transform: translate() and margin
+
+    * When we are using margin impact for the other element as well.
+    * When we are using transform: translate: (); not impact to the other element which are there inside it */
+
+}
+
+.demo1 {
+    /* margin: 60px auto; */
+    width: 330px;
+    border-radius: 12px;
+    background-color: orangered;
+    padding: 10px;
+    color: white;
+    transform: scale();
+    transform: translate(10px, 50px);
+}
+
+/* Pseudo elements:
+    Most important pseaudo elements are:
+      ::first-line
+      ::first-letter
+      ::selection
+      ::before
+      ::after
+*/
+
+h1::first-line {
+    color: red;
+} 
+
+h1::first-letter {
+    font-size: 80px;
+    color: blue;
+}
+
+h1::selection {
+    background-color: black;
+    color: white;
+}
+
+/* Now it will target all the elements */
+::selection {
+    background-color: black;
+    color: white;
+}
+
+/* 
+    Pseudo classes:
+      hover
+      focus
+      active
+      first-child
+      last-child
+      nth-child
+      not
+*/
+
+.img-filter:hover {
+    filter: blur(0);
+    cursor: pointer;
+    width: 540px;
+    object-fit: cover;
+    transform: translate(20px, 10px);
+}
+
+h1:hover {
+    color: violet;
+}
+
+input {
+    width: 320px;
+    padding: 16px;
+    margin: auto 240px;
+    font-size: 16px;
+    border: 1px solid lightgray;
+    border-radius: 12px;
+}
+
+input:focus {
+
+    /* both property will work, focus only works with input filed most of the time. */
+    /* outline: 1px solid green; */
+    outline: none;
+    border: 1px solid tomato;
+}
+
+button {
+    width: 220px;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+button:active {
+    background-color: red;
+}
+
+p:first-child {
+    color: red;
+}
+
+p:last-child{
+    color: green;
+}
+
+p:nth-child(2) {
+    color: blue;
+}
+/* every 2 elements are selected */
+p:nth-child(2n) {
+    color: blue;
+}
+
+.test::before {
+    content: "👌";
+}
+
+.test::after {
+    content: "🙌";
+}
