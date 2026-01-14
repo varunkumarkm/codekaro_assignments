@@ -1,0 +1,243 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* What is Animations?
+   Anything that is moving on the screen maybe it is and image, paragraph, heading etc. that is call as animations.
+
+*/
+
+.container {
+    width: 400px;
+    margin: 120px auto;
+    text-align: center;
+}
+
+.btn {
+    background-color: white;
+    padding: 16px 30px;
+    border: 1px solid lightgray;
+    border-radius: 12px;
+    font-size: 18px;
+    position: relative;
+    overflow: hidden;
+    /* Once we add this property animation is happening */
+    transition: 1s;
+    z-index: 0;
+}
+
+.btn::after {
+    content: "";
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    transition: .4s;
+    z-index: -1;
+}
+
+.btn:hover {
+    color: white;
+}
+
+.btn:hover::after {
+    transform: translate(-50%, -50%) scale(4);
+}
+
+/*
+-----------------------------
+.btn::after {
+    content: "";
+    background-color: black;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .4s;
+    z-index: -1;
+}
+
+.btn:hover {
+    color: white;
+}
+
+.btn:hover::after {
+    width: 100%;
+} 
+------------------------    
+*/
+
+
+/* This is an instant animation */
+/* .btn:hover {
+    background-color: black;
+    color: white;
+    border-radius: 16px;
+    border: 1px solid black;
+} */
+
+.img {
+    width: 500px;
+    border-radius: 16px;
+    transition: .5sec;
+}
+
+.img:hover {
+    transform: rotate(4deg);
+    border-radius: 24px;
+}
+
+/* Without mouse over to the content how we can animate */
+
+.demo {
+    width: 80px;
+    height: 80px;
+    background-color: red;
+    animation-name: virat;
+    animation-duration: 4s;
+
+    /* If we use this property animation will start automatically */
+    animation-delay: 5s;
+
+    /* If we want our animation should be there in the destination position
+    animation-fill-mode: forwards; */
+
+    /* count od animating, If we need keep on animating use infinite    
+    animation-iteration-count: 3; */
+    animation-iteration-count: infinite;
+
+    /* position of moving 
+    animation-direction: reverse; 
+    below property helps moving both the way*/
+    animation-direction: alternate;
+
+    /* If we want speed of the animation 
+    animation-timing-function: ease;*/
+    animation-timing-function: linear;
+
+}
+
+/* it means, Puting the values inside of the frames, example in the vidous in 5sec more images changes same like this as well 
+now, using keyframe we are puting the frames inside that which person is in the animation-name: he will act based on keyframes*/
+
+@keyframes virat{
+    form{}
+    to{
+        margin-left: calc(100% - 80px);
+        background-color: goldenrod;
+        border-radius: 50%;
+        transform: rotate(360deg);
+    }
+}
+
+/* Loading ring in the screen */
+
+.section {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader {
+    height: 40px;
+    width: 40px;
+    border: 2px solid rgba(211, 211, 211, 0.316);
+    border-radius: 50%;
+    border-top: 2px solid black;
+    animation-name: loader;
+    animation-duration: 1.6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+/* @keyframes loader {
+    form{}
+    to{
+        transform: rotate(360deg);
+    }
+} */
+
+@keyframes loader {
+    0% {
+        border-top: 2px solid orangered;
+        transform: rotate(0deg);
+    }
+    25% {
+        border-top: 2px solid violet;
+        transform: rotate(90deg);
+    }
+    50% {
+        border-top: 2px solid blue;
+        transform: rotate(180deg);
+    }
+    75% {
+        border-top: 2px solid burlywood;
+        transform: rotate(270deg);
+    }
+    100% {
+        border-top: 2px solid greenyellow;
+        transform: rotate(360deg);
+    }
+}
+
+/* dribble cards animation */
+
+.cards-section {
+    overflow: hidden;
+}
+
+.dribble-cards {
+    margin-top: 100px;
+    display: flex;
+    gap: 20px;
+    animation-name: card-animation;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes card-animation {
+    0%{}
+    100%{
+        transform: translate(-50%);
+    }
+}
+
+.dribble-cards::-webkit-scrollbar {
+    display: none;
+}
+
+.cards {
+    width: 270px;
+    height: 340px;
+    background-color: blueviolet;
+    border-radius: 26px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.user {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.tint {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(51.91%, transparent), color-stop(75.88%, rgba(0, 0, 0, 0.3)));
+    background: linear-gradient(180deg, transparent 51.91%, rgba(0, 0, 0, 0.3) 75.88%);
+}
