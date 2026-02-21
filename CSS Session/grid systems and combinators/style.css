@@ -1,0 +1,96 @@
+/* 
+    root elements -> For the repaeted things define an varibale and reuse that using creating an tag :root {} inside that.
+
+    css combinators -> Is used to select elements on basis of specific conditions.
+    We have 3 type of combinators they are:
+    1. Space ( ) – Descendant
+    2. Greater than (>) – Child
+    3. Plus (+) – Adjacent sibling
+    4. Tilde (~) – General sibling
+
+    grid system -> 
+*/
+
+:root {
+    --borderRadious: 10px;
+    --borderColor: #eee;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+
+}
+
+.card {
+    width: 300px;
+    border: 1px solid var(--borderColor);
+    border-radius: var(--borderRadious);
+    margin: 60px auto;
+    padding: 10px;
+}
+
+.card img {
+    border-radius: var(--borderRadious);
+    width: 100%;
+}
+
+/* decendent selector */
+/* .card img {
+    border-radius: var(--borderRadious);
+    width: 50%;
+} */
+
+/* child selector */
+/* .card > img {
+    border-radius: var(--borderRadious);
+    width: 100%;
+} */
+
+/* Tilde (~) – General sibling */
+/* h2 ~ p {
+  color: red;
+} */
+
+
+.todo {
+    background-color: rgb(202, 239, 239);
+    display: flex;
+    gap: 8px;
+    width: 400px;
+    margin: 120px auto;
+    border: 1px solid rgb(14, 227, 227);
+    padding: 20px;
+    border-radius: var(--borderRadious);
+    align-items: center;
+}
+
+p {
+    transition: .3s;
+    text-decoration: none;
+}
+
+.checkbox:checked+p {
+    text-decoration: line-through;
+}
+
+
+
+/* grid system example */
+.parent {
+    width: 100vw;
+    margin: auto;
+    height: 100vh;
+    background-color: var(--borderColor);
+    display: grid;
+    /* grid-template-columns: repeat(4, 20%); */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 10px;
+    justify-content: space-evenly;
+    /* align-items: center; */
+}
+
+.child img {
+    width: 100%;
+    border-radius: var(--borderRadious);
+}
