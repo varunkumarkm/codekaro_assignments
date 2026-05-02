@@ -1,0 +1,17 @@
+Into to tailwind
+ - It is one more CSS library, like bootstrap.
+
+1) why tailwind is required? and What problem tailwind is solving that bootstrap is not solving.
+    - Tailwind performance is better than bottstrap. In the tailwind whatever the classess we are used only those classes
+      are visible in the CSS file. 
+    - Tailwind is utility based framework, utlitiy means we can customize the CSS the way we want without leaving HTML file. 
+      However in the bootstrap lot of customize options are not there.
+    - In the tailwind we not have to move between HTML and CSS again and again, we can just be there in the HTML file and
+      we can keep on coding in the HTML file.
+
+2) So, we want to install tailwind go to the "tailwind cdn" (Content delivery network).
+   For production use, we have to seperately install tailwind - Go to "tailwindcss.com" -> click on get started.
+   Follow the procedure as per this and configure the tailwind CSS.
+
+3) Box-Model - It consists of three things border, padding and margin
+
