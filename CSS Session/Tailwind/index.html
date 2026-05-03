@@ -4,6 +4,7 @@
 <head>
   <link href="/input.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <script src="https://unpkg.com/alpinejs" defer></script>
 </head>
 
 <body>
@@ -136,8 +137,10 @@
     </div>
   </div> -->
 
-  <div class="flex">
-    <!-- Sidebar -->
+  <!-- Chat GPT clone -->
+
+  <!-- <div class="flex">
+    Sidebar
     <div class="hidden sm:block relative bg-neutral-100 h-screen w-70 px-4 py-3">
       <div class="flex gap-4 items-center">
         <img src="https://tse3.mm.bing.net/th/id/OIP.MGwv0BQx9pJSCPJ4N2e2_AHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt=""
@@ -164,7 +167,7 @@
       <div class="text-neutral-800 py-2 px-4 hover:bg-neutral-200 rounded-lg hover:cursor-pointer mt-2 mb-1">Debuggin
         backend application</div>
 
-      <!-- Side bar bottom -->
+      Side bar bottom
       <div class="absolute bottom-3 w-[calc(100%-32px)]">
 
         <div
@@ -194,7 +197,7 @@
 
     </div>
 
-    <!-- Main content -->
+    Main content
     <div class="h-screen w-[70%] mx-auto sm:mx-0 sm:w-[calc(100%-270px)] relative">
 
       <div class="sm:w-[70%] w-full mx-auto absolute bottom-5 left-1/2 -translate-x-1/2">
@@ -206,24 +209,28 @@
         </div>
 
         <div class="md:flex flex sm:block gap-3 mt-14">
-          <div class="border rounded-xl px-5 py-3 md:w-1/2 sm:w-full sm:mb-3 md:mb-0 hover:bg-neutral-50 hover:cursor-pointer">
+          <div
+            class="border rounded-xl px-5 py-3 md:w-1/2 sm:w-full sm:mb-3 md:mb-0 hover:bg-neutral-50 hover:cursor-pointer">
             <h2 class="text-sm font-semibold">Create a morning routine</h2>
             <p class="text-neutral-500">to boost my productivity</p>
           </div>
 
-          <div class="border rounded-xl px-5 py-3 md:w-1/2 sm:w-full sm:mb-3 md:mb-0 hover:bg-neutral-50 hover:cursor-pointer">
+          <div
+            class="border rounded-xl px-5 py-3 md:w-1/2 sm:w-full sm:mb-3 md:mb-0 hover:bg-neutral-50 hover:cursor-pointer">
             <h2 class="text-sm font-semibold">Make up a story</h2>
             <p class="text-neutral-500">about sharky, a tooth-brushing shark superhero </p>
           </div>
         </div>
 
         <div class="md:flex flex sm:block gap-3 mt-3">
-          <div class="border rounded-xl px-5 py-3 md:w-1/2 sm:w-full sm:mb-3 md:mb-0 hover:bg-neutral-50 hover:cursor-pointer">
+          <div
+            class="border rounded-xl px-5 py-3 md:w-1/2 sm:w-full sm:mb-3 md:mb-0 hover:bg-neutral-50 hover:cursor-pointer">
             <h2 class="text-sm font-semibold">write a python script</h2>
             <p class="text-neutral-500">to automate sending daily email reports</p>
           </div>
 
-          <div class="border rounded-xl px-5 py-3 md:w-1/2 sm:w-full sm:mb-3 md:mb-0 hover:bg-neutral-50 hover:cursor-pointer">
+          <div
+            class="border rounded-xl px-5 py-3 md:w-1/2 sm:w-full sm:mb-3 md:mb-0 hover:bg-neutral-50 hover:cursor-pointer">
             <h2 class="text-sm font-semibold">Plan a mental health day</h2>
             <p class="text-neutral-500">to help me relax </p>
           </div>
@@ -238,7 +245,98 @@
       </div>
 
     </div>
-  </div>
+  </div> -->
+
+
+  <!-- <div class="bg-violet-600 text-white text-center py-3 font-semibold">
+    If you've got tasks, start managing today!
+  </div> -->
+
+  <div class="w-90 mx-auto mt-16">
+    <h1 class="text-xl font-semibold text-black">Manage your task <span class="text-neutral-500">@varun</span></h1>
+    <p class="text-neutral-600">Add your tasks and organizing them quickly</p>
+
+    <div class="w-90 mx-auto mt-5">
+
+      <div class="border border-violet-400 bg-violet-50  mb-3 rounded-xl p-3">
+        <p>Learn Tailwind media queries</p>
+        <p class="text-neutral-700 text-sm">Lorem ipsum dolor sit amet adipisicing elit.</p>
+        <div class="flex gap-4">
+          <button class="text-neutral-500 hover:text-green-700 flex gap-3 items-center mt-2 text-sm"><svg
+              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-circle"
+              viewBox="0 0 16 16">
+              <path
+                d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0" />
+              <path
+                d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z" />
+            </svg>
+            Mark as done</button>
+
+          <button class="text-neutral-500 hover:text-red-500 flex gap-3 items-center mt-2 text-sm"><svg
+              xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3"
+              viewBox="0 0 16 16">
+              <path
+                d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5" />
+            </svg>
+            Delete</button>
+        </div>
+      </div>
+    </div>
+
+    <button
+      class="fixed bottom-10 right-10 bg-black text-white flex w-10 h-10 rounded-full items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus"
+        viewBox="0 0 16 16">
+        <path
+          d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+      </svg>
+    </button>
+
+    <div x-data="{ modalOpen: false }" @keydown.escape.window="modalOpen = false" class="relative z-50 w-auto h-auto">
+      <button @click="modalOpen=true"
+        class="fixed bottom-10 right-10 bg-black text-white flex w-10 h-10 rounded-full items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-plus"
+          viewBox="0 0 16 16">
+          <path
+            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+        </svg>
+      </button>
+      <!-- <button  class="inline-flex justify-center items-center px-4 py-2 h-10 text-sm font-medium bg-white rounded-md border transition-colors hover:bg-neutral-100 active:bg-white focus:bg-white focus:outline-none focus:ring-2 focus:ring-neutral-200/60 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none">Open</button> -->
+      <template x-teleport="body">
+        <div x-show="modalOpen" class="fixed top-0 left-0 z-99 flex items-center justify-center w-screen h-screen"
+          x-cloak>
+          <div x-show="modalOpen" x-transition:enter="ease-out duration-100" x-transition:enter-start="opacity-0"
+            x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-100"
+            x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" @click="modalOpen=false"
+            class="absolute inset-0 w-full h-full bg-black/40"></div>
+          <div x-show="modalOpen" x-trap.inert.noscroll="modalOpen" x-transition:enter="ease-out duration-300"
+            x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100" x-transition:leave="ease-in duration-200"
+            x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+            x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            class="relative px-4 py-6 w-full bg-white sm:w-160 sm:rounded-lg">
+            <div class="relative w-auto">
+
+              <div class="">
+                <input
+                  class="text-xl w-full rounded-lg focus:outline-none p-3"
+                  type="text" placeholder="Task name">
+                <input
+                  class="text-sm text-neutral-600 w-full rounded-lg focus:outline-none p-3 mb-2"
+                  type="text" placeholder="Description">
+                <!-- <input
+                  class="w-[13%] p-3 rounded-lg mb-2"
+                  type="date"> -->
+              </div>
+              <div class="flex gap-2 justify-end">
+                <button @click="modalOpen=false" class="bg-neutral-200 text-black px-5 py-3 text-sm font-semibold rounded-lg hover:cursor-pointer">Cancel</button>
+                <button class="bg-black text-white px-5 py-3 text-sm font-semibold rounded-lg hover:cursor-pointer">Add Task</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </template>
+    </div>
 
 </body>
 
