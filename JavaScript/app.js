@@ -1,3 +1,125 @@
+//====================JavaScript practice================================
+
+// array and objects
+// conditionals
+// loops
+
+// let items = ['milk', 'bread', 'butter'];
+// console.log(items);
+// items.push('apples');
+// items.pop()
+// items.pop()
+// splice
+// items.splice(0, 4, 'apple');
+// console.log(items);
+
+
+// console.log(typeof items)
+
+
+// let user = {
+//     name: 'yash',
+//     age: 24,
+//     email: 'yash@gmail.com',
+//     hobbies: ['teaching', 'reading books', 'cooking']
+// }
+// user.name = 'yash goel'
+// user.phone = '1234567890'
+// delete user.age
+// console.log(user)
+
+// console.log(typeof user)
+
+
+// let arr = ['yash', 'mayank', 'kunal']
+//     arr['test'] = 'nayan';
+// console.log(arr)
+
+// array of objects
+// let users = [
+//     {name: 'yash', email: 'yash@gmail.com'},
+//     {name: 'ashish', email: 'ashish@gmail.com'},
+//     {name: 'himanshu', email: 'himanshu@gmail.com'},
+//     {name: 'arpit', email: 'arpit@gmail.com'},
+//     {name: 'kunal', email: 'kunal@gmail.com'},
+//     {name: 'preetha', email: 'preetha@gmail.com'},
+//     {name: 'kapil', email: 'suman@gmail.com'},
+//     {name: 'varun', mail: 'suman@gmail.com'},
+//     {name: 'neha', email: 'suman@gmail.com'},
+//     {name: 'ramya', email: 'suman@gmail.com'},
+//     {name: 'keerthi', email: 'suman@gmail.com'},
+
+// ]
+// let random = Math.floor(Math.random()*users.length)
+// console.log(users[random].name)
+// console.log()
+
+
+
+// conditionals
+// any value that is either true / false or it gets converted to true or false can be given inside if!
+// let age = 4;
+// let a = null;
+// console.log(a)
+// if(a){
+//     console.log('You can vote');
+// }
+// else{
+//     console.log('you can not vote');
+// }
+
+// truthy and falsy
+// falsy => 0, -0, "", '', undefined, null, nan => false
+// anything apart from falsy is treated as truthy values => true
+
+
+// let n = 11;
+// if(n % 2 == 0){
+//     console.log('the number is even')
+// }
+// else{
+//     console.log('the number is odd')
+// }
+
+
+// there is a swimming comp.
+// 14-16 => junior level
+// 17-24 => senior level
+// after 24 years then he is not eligible to play
+// if the user is less than 14 years than also he is not eligigle to play
+// let age = 24;
+// if(age >= 14 && age <=16){
+//     console.log('you can play in junior level')
+// }
+// else if(age>=17 && age <=24){
+//     console.log('you can play in senior level')
+// }
+// else{
+//     console.log('you are not eligible to play')
+// }
+
+// let age = 4;
+// ternary operator
+// age >= 18 ? console.log('can vote') : console.log('can not vote!')
+
+
+// let user = 'yash'
+// let salary = '35000'
+
+// if(user == 'yashi' || salary == 35000){
+//     console.log('user found!!')
+// }
+
+// === (strictly equal to ) => compares the value and data types
+// == (equal to ) => comapares the value
+// if(salary === 35000){
+//     console.log('true')
+// }
+// else{
+//     console.log('false')
+// }
+
+
 //====================Functions and loops=================================
 
 // functions
@@ -36,11 +158,11 @@
 
 
 
-    // function calculateSalary(name, salary){
-    //     let tds = salary * 0.1;
-    //     let inhand = salary - tds;
-    //     return inhand;
-    // }
+// function calculateSalary(name, salary){
+//     let tds = salary * 0.1;
+//     let inhand = salary - tds;
+//     return inhand;
+// }
 // always use return at the end anything after end becomes unreachable
 
 // let inhand = calculateSalary('yash', 54000);
@@ -214,7 +336,7 @@
 //       age: 34
 //     }
 //   ];
-  
+
 
 // let sqrs = [];
 // for(let i=0; i<arr.length; i++){
@@ -405,7 +527,7 @@
 //       actors: ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain"]
 //     }
 //   ];
-  
+
 //   console.log(movies);
 
 // let movieDetails = movies.map(movie => ({
@@ -453,4 +575,165 @@
 //   console.log(dramaMovie);
 
 
-  
+
+//=====================Documnet Object Model (DOM)=========================
+
+
+// function unlocked() {
+//   let title = document.getElementById('heading');
+//   let button = document.getElementById('btn');
+//   title.innerText = 'Congragulations! Now you can start with DOM manupulation.';
+//   button.style.display = 'none';
+//   console.log(typeof button);
+// }
+
+
+// function welcome(){
+//   let studentName = document.getElementById('inputData');
+//   let displayName = document.getElementById('displayName');
+//   displayName.innerText = studentName.value;
+//   studentName.value = ''
+//   console.log(studentName.value);
+// }
+
+// function split (){
+//   let amount = document.getElementById('amount');
+//   let persons = document.getElementById('persons');
+
+//   let result = (amount.value / persons.value).toFixed(2);
+//   let resultDiv = document.getElementById('result');
+//   resultDiv.innerText = result;
+
+//   amount.value = ''
+//   persons.value = ''
+
+// }
+
+// let counter = 0;
+// let counterResult = document.getElementById('counterResult')
+// function increment() {
+
+//   counter++;
+//   counterResult.innerText = counter;
+// }
+
+// function decrement() {
+
+//   if (counter > 0) {
+//     counter--;
+//     counterResult.innerText = counter;
+//   }
+// }
+
+
+// let demo = document.getElementById('demo');
+// demo.innerHTML = '<h1 class="text-2xl font-bold">Welcome to JavaScript</h1>';
+
+// function changeText() {
+//   let heading = document.getElementById('title');
+//   heading.innerText = "Welcome to the JavaScript";
+// }
+
+
+// let message = document.getElementById('message');
+
+// let result = document.getElementById('result');
+
+// function countCharacters() {
+
+//   console.log("JS Loaded");
+
+//   let text = message.value;
+
+//   let totalCharacters = text.length;
+
+//   let remaining = 100 - totalCharacters;
+
+//   result.innerText =
+//     "Remaining Characters: " + remaining;
+
+//   if (remaining < 0) {
+
+//     result.style.color = "red";
+
+//   } else {
+
+//     result.style.color = "black";
+
+//   }
+// }
+
+
+// let heightInput = document.getElementById('height');
+
+// let weightInput = document.getElementById('weight');
+
+// let bmiResult = document.getElementById('bmiResult');
+
+// let statusText = document.getElementById('status');
+
+// function calculateBMI() {
+
+//   let height = heightInput.value;
+
+//   let weight = weightInput.value;
+
+//   // Convert cm to meter
+
+//   let heightInMeter = height / 100;
+
+//   // BMI Formula
+
+//   let bmi = weight / (heightInMeter * heightInMeter);
+
+//   // Round value
+
+//   bmi = bmi.toFixed(1);
+
+//   // Update Result
+
+//   bmiResult.innerText = "BMI: " + bmi;
+
+//   // Conditions
+
+//   if (bmi < 18.5) {
+
+//     statusText.innerText = "Underweight ⚠️";
+//     statusText.style.color = "yellow";
+
+//   }
+
+//   else if (bmi >= 18.5 && bmi <= 24.9) {
+
+//     statusText.innerText = "Normal ✅";
+//     statusText.style.color = "lightgreen";
+
+//   }
+
+//   else if (bmi >= 25 && bmi <= 29.9) {
+
+//     statusText.innerText = "Overweight ⚠️";
+//     statusText.style.color = "orange";
+
+//   }
+
+//   else {
+
+//     statusText.innerText = "Obese ❌";
+//     statusText.style.color = "red";
+
+//   }
+// }
+
+// function clickHere(){
+//   let clickMe = document.getElementById('handleIt');
+//   let checkUpdate = document.getElementById('paragraph')
+//   let addWords = document.getElementById('addSentence')
+
+//   addWords.innerText = addWords.value;
+
+//   addWords.innerText = "Malora Groups";
+
+// }
+
+
