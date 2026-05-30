@@ -1,0 +1,202 @@
+/* =================Dice Example===================== */
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+    width: 400px;
+    margin: 40px auto;
+}
+
+.heading {
+    font-size: 32px;
+    font-weight: bolder;
+}
+
+.button {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 16px 30px;
+    font-size: 18px;
+    margin-top: 16px;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.dice {
+    width: 80px;
+    height: 80px;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bolder;
+    border-radius: 12px;
+    margin-top: 16px;
+}
+
+.spin {
+    animation-name: spin;
+    animation-duration: .5s;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+.box-container {
+    width: 400px;
+    margin: 60px auto;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.box {
+    height: 80px;
+    width: 80px;
+    background-color: orangered;
+    border-radius: 12px;
+}
+
+
+/* ================Name and Emial example========================= */
+
+.flex {
+    display: flex;
+    gap: 12px;
+}
+
+.input {
+    width: 50%;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+}
+
+.input:focus {
+    outline: none;
+    border: 1px solid dodgerblue;
+}
+
+.users-container {
+    width: 400px;
+    margin: 40px auto;
+}
+
+.user {
+    width: 100%;
+    border-radius: 12px;
+    padding: 8px 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #eee;
+    margin-top: 12px;
+    align-items: center;
+}
+
+.deleteButton {
+    color: red;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+}
+
+.deleteButton:hover {
+    transform: scale(1.2);
+}
+
+.alert {
+    border: none;
+    border-radius: 12px;
+    padding: 16px 30px;
+    font-size: 18px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 210px;
+    transition: .3s;
+    transform: scale(0);
+}
+
+.hidden {
+    display: none;
+}
+
+.success {
+    color: green;
+    background-color: rgb(201, 231, 201);
+    transform: scale(1);
+}
+
+.danger {
+    color: red;
+    background-color: rgb(244, 221, 221);
+    transform: scale(1);
+}
+
+/* ========================User form example=============================== */
+
+.formContainer {
+    width: 420px;
+    margin: 20px auto;
+    border: 1px solid lightgray;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.inputField {
+    width: 100%;
+    margin-top: 12px;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.btn {
+    background-color: black;
+    color: white;
+    padding: 14px;
+    width: 140px;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+.responseContainer {
+    width: 420px;
+    margin: 20px auto;
+}
+
+.userDetails {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+    background-color: antiquewhite;
+}
+
+.userDetails p {
+    margin: 8px 0;
+}
