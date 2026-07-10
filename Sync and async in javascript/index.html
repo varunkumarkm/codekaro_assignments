@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>M2 Movie Finder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- <div class="w-[400px] my-32 mx-auto">
+        <p id="id" class="text-xl"></p>
+        <p id="todo" class="mt-2 text-neutral-500"></p>
+        <p id="userId" class="text-md text-neutral-500 mt-2"></p>
+        <button onclick="fecthTodos()" class="bg-black px-5 py-3 rounded text-white mt-4">Generate new todo</button>
+    </div> -->
+
+    <!-- <div class="w-[400px] mx-auto mt-20">
+      <div id="userCard" class="border rounded-xl p-5 text-center">
+        <img id="userImage" class="w-28 h-28 rounded-full mx-auto" />
+
+        <h2 id="userName" class="text-2xl font-bold mt-3"></h2>
+
+        <p id="userEmail"></p>
+
+        <p id="userCountry"></p>
+      </div>
+
+      <button
+        onclick="getUser()"
+        class="w-full bg-black text-white py-3 rounded-xl mt-4"
+      >
+        Generate User
+      </button>
+    </div> -->
+
+    <!-- ambient marquee glow -->
+    <div class="glow glow-a"></div>
+    <div class="glow glow-b"></div>
+
+    <div class="header">
+      <img
+        class="logo"
+        src="Profile pic.png"
+        alt="This is the malora groups logo"
+      />
+      <p class="eyebrow">M2 &middot; Malora Groups presents</p>
+      <h2 class="hero-title">
+        Search unlimited films, TV shows series and more
+      </h2>
+      <p class="hero-sub">
+        Ready to watch? Enter your movie name to check if it's a good choice
+      </p>
+
+      <div class="search-row">
+        <input
+          class="search-input"
+          type="text"
+          placeholder="Try “RRR”, “Kantara”, “Inception”…"
+          id="movieName"
+        />
+        <button class="btn" id="searchBtn" onclick="search()">
+          <span class="btn-label">Search movie</span>
+        </button>
+      </div>
+
+      <p id="statusMsg" class="status-msg hidden"></p>
+    </div>
+
+    <div id="container" class="ticket-wrap hidden">
+      <div class="ticket">
+        <div class="ticket-poster">
+          <img
+            id="poster"
+            src="https://m.media-amazon.com/images/M/MV5BY2VkZjk5ZjMtM2ExOS00ZDA1LTg1ZDEtYTliNGZiYTc4ZWZiXkEyXkFqcGc@._V1_SX300.jpg"
+            alt="This is a movie post"
+          />
+          <div class="admit-one">ADMIT ONE</div>
+        </div>
+
+        <div class="ticket-divider" aria-hidden="true"></div>
+
+        <div class="ticket-details">
+          <div class="ticket-top-row">
+            <h1 id="title" class="movie-title">Kantara</h1>
+            <div class="rating-badge">
+              <span id="ratings">7.8</span>
+              <span class="rating-unit">IMDB</span>
+            </div>
+          </div>
+
+          <span id="verdict" class="verdict-tag">Worth watching</span>
+
+          <p id="desc" class="movie-desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
+            hic perspiciatis dolore molestiae libero quibusdam illo!
+          </p>
+
+          <div class="stub-grid">
+            <div class="stub-field">
+              <span class="stub-label">Actors</span>
+              <span class="stub-value" id="actors">Kumar Varun</span>
+            </div>
+            <div class="stub-field">
+              <span class="stub-label">Director</span>
+              <span class="stub-value" id="directors">Kumar Varun</span>
+            </div>
+            <div class="stub-field">
+              <span class="stub-label">Awards</span>
+              <span class="stub-value" id="awards">Kumar Varun</span>
+            </div>
+            <div class="stub-field">
+              <span class="stub-label">Box office</span>
+              <span class="stub-value" id="collection">Kumar Varun</span>
+            </div>
+            <div class="stub-field">
+              <span class="stub-label">Language</span>
+              <span class="stub-value" id="ln">Kumar Varun</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

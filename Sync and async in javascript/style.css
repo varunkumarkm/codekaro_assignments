@@ -1,0 +1,407 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0a0b0e;
+  --bg-elevated: #14161c;
+  --navy: #1b2740;
+  --gold: #c9a227;
+  --gold-light: #e8d9a0;
+  --text-primary: #f2efe9;
+  --text-secondary: #9aa0ae;
+  --divider: #2a2d35;
+}
+
+body {
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+
+  background: var(--bg);
+  color: var(--text-primary);
+  margin: 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ---------- ambient marquee glow ---------- */
+.glow {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.16;
+  pointer-events: none;
+  z-index: 0;
+}
+.glow-a {
+  width: 480px;
+  height: 480px;
+  background: var(--gold);
+  top: -180px;
+  left: -140px;
+}
+.glow-b {
+  width: 520px;
+  height: 520px;
+  background: var(--navy);
+  bottom: -220px;
+  right: -160px;
+  opacity: 0.35;
+}
+
+/* ---------- header / hero ---------- */
+.header {
+  width: 700px;
+  max-width: 92vw;
+  margin: 56px auto 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  height: 72px;
+  margin: 0 auto 18px;
+  display: block;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin: 0 0 14px;
+  font-weight: 600;
+}
+
+.hero-title {
+  font-family: "Bebas Neue", "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 44px;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.hero-sub {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin: 12px 0 0;
+}
+
+/* ---------- search ---------- */
+.search-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
+
+.search-input {
+  width: 460px;
+  max-width: 68vw;
+  padding: 16px 20px;
+  border-radius: 999px 0 0 999px;
+  font-size: 16px;
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--divider);
+  border-right: none;
+  color: var(--text-primary);
+  transition: 0.25s;
+}
+
+.search-input::placeholder {
+  color: var(--text-secondary);
+}
+
+.search-input:focus {
+  outline: none;
+  background-color: #191c24;
+  border-color: var(--gold);
+}
+
+.btn {
+  background: linear-gradient(135deg, var(--gold), #a9821c);
+  width: 160px;
+  color: #17140a;
+  border: 1px solid var(--gold);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border-radius: 0 999px 999px 0;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn.is-loading .btn-label {
+  opacity: 0.7;
+}
+
+.status-msg {
+  margin: 18px auto 0;
+  font-size: 14px;
+  color: #e8a0a0;
+  background: rgba(232, 160, 160, 0.08);
+  border: 1px solid rgba(232, 160, 160, 0.25);
+  padding: 10px 16px;
+  border-radius: 10px;
+  max-width: 460px;
+}
+
+.status-msg.is-loading {
+  color: var(--gold-light);
+  background: rgba(201, 162, 39, 0.08);
+  border-color: rgba(201, 162, 39, 0.25);
+}
+
+/* ---------- ticket ---------- */
+.ticket-wrap {
+  width: 760px;
+  max-width: 94vw;
+  margin: 48px auto 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.ticket {
+  display: flex;
+  background: var(--bg-elevated);
+  border: 1px solid var(--divider);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6);
+}
+
+.ticket-poster {
+  position: relative;
+  width: 220px;
+  flex-shrink: 0;
+  background: var(--navy);
+}
+
+.ticket-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.admit-one {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-90deg);
+  transform-origin: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  color: var(--gold-light);
+  background: rgba(10, 11, 14, 0.65);
+  padding: 4px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.ticket-divider {
+  position: relative;
+  width: 0;
+  border-left: 2px dashed var(--divider);
+  flex-shrink: 0;
+}
+
+.ticket-divider::before,
+.ticket-divider::after {
+  content: "";
+  position: absolute;
+  left: -12px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--bg);
+}
+
+.ticket-divider::before {
+  top: -12px;
+}
+
+.ticket-divider::after {
+  bottom: -12px;
+}
+
+.ticket-details {
+  padding: 26px 30px;
+  flex: 1;
+  min-width: 0;
+}
+
+.ticket-top-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.movie-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-size: 34px;
+  letter-spacing: 0.01em;
+  margin: 0;
+  color: var(--text-primary);
+  line-height: 1.05;
+}
+
+.rating-badge {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold);
+  color: var(--gold-light);
+  font-weight: 700;
+}
+
+.rating-badge span:first-child {
+  font-size: 16px;
+  line-height: 1.1;
+}
+
+.rating-unit {
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.verdict-tag {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+}
+
+/* > 7.0 */
+.verdict-tag.tier-good {
+  color: #3ecf8e;
+  background: rgba(62, 207, 142, 0.1);
+  border-color: rgba(62, 207, 142, 0.35);
+}
+
+/* 6.0 - 7.0 */
+.verdict-tag.tier-mid {
+  color: var(--gold-light);
+  background: rgba(201, 162, 39, 0.12);
+  border-color: rgba(201, 162, 39, 0.4);
+}
+
+/* < 6.0 */
+.verdict-tag.tier-low {
+  color: #e2726e;
+  background: rgba(226, 114, 110, 0.1);
+  border-color: rgba(226, 114, 110, 0.35);
+}
+
+.movie-desc {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 12px 0 20px;
+}
+
+.stub-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 24px;
+  border-top: 1px solid var(--divider);
+  padding-top: 18px;
+}
+
+.stub-field {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.stub-label {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  font-weight: 600;
+}
+
+.stub-value {
+  font-size: 14px;
+  color: var(--text-primary);
+  overflow-wrap: break-word;
+}
+
+/* ---------- utility ---------- */
+.flex {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .ticket {
+    flex-direction: column;
+  }
+  .ticket-poster {
+    width: 100%;
+    height: 260px;
+  }
+  .ticket-divider {
+    width: auto;
+    height: 0;
+    border-left: none;
+    border-top: 2px dashed var(--divider);
+  }
+  .ticket-divider::before,
+  .ticket-divider::after {
+    top: -12px;
+    left: auto;
+  }
+  .ticket-divider::before {
+    left: -12px;
+  }
+  .ticket-divider::after {
+    right: -12px;
+    left: auto;
+  }
+  .search-input {
+    width: 100%;
+  }
+}
